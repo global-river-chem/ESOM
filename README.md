@@ -2,7 +2,7 @@
 
 This repo is for ESOM site-list checks and comparisons.
 
-It is separate from `spatial-data`.
+It is separate from `spatial-qaqc`.
 
 ## Scope
 - maintain ESOM site lists
@@ -11,7 +11,7 @@ It is separate from `spatial-data`.
 
 ## Expected Inputs
 - ESOM site list CSVs
-- finalized spatial dataset from `spatial-data`
+- finalized spatial dataset from `spatial-qaqc`
 - naming key file when needed
 
 ## Initial Structure
