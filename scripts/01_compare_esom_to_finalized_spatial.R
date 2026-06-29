@@ -91,8 +91,11 @@ spatial_file <- resolve_input_file(
 
 esom_file <- resolve_input_file(
   arg_val("--esom"),
-  c(file.path(box_root, "ESOM_Sites.csv")),
-  label = "ESOM site list"
+  c(
+    file.path(box_root, "esom_sites.csv"),
+    file.path(box_root, "ESOM_Sites.csv")
+  ),
+  label = "esom site list"
 )
 
 naming_key_file <- resolve_input_file(
@@ -113,7 +116,7 @@ esom <- read.csv(esom_file, stringsAsFactors = FALSE, check.names = FALSE)
 esom_lter_col <- first_present_name(esom, c("LTER", "lter"))
 esom_stream_col <- first_present_name(esom, c("Stream_Name", "stream_name", "Stream", "stream", "Site", "site", "Site_Name", "site_name"))
 if (!nzchar(esom_lter_col) || !nzchar(esom_stream_col)) {
-  stop("ESOM site list must contain LTER and Stream_Name-like columns.", call. = FALSE)
+  stop("esom site list must contain LTER and Stream_Name-like columns.", call. = FALSE)
 }
 
 spatial$LTER_matched <- norm_lter(spatial$LTER, naming_key)
