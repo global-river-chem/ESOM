@@ -141,7 +141,6 @@ summary_df <- data.frame(
   stringsAsFactors = FALSE
 )
 
-write.csv(esom_unique, file.path(outdir, "esom_sites_name_matched.csv"), row.names = FALSE)
 write.csv(esom_missing, file.path(outdir, "esom_sites_not_in_spatial.csv"), row.names = FALSE)
 write.csv(spatial_missing, file.path(outdir, "spatial_sites_not_in_esom.csv"), row.names = FALSE)
 write.csv(summary_df, file.path(outdir, "esom_spatial_compare_summary.csv"), row.names = FALSE)
